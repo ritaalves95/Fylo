@@ -1,0 +1,24 @@
+$backgroundBlue: hsl(218, 28%, 13%);
+$darkBlue: hsl(216, 53%, 9%);
+$blue: hsl(219, 30%, 18%);
+$green: hsl(176, 68%, 64%);
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin grid($template, $gap) {
+    display: grid;
+    grid-template-columns: $template;
+    grid-gap: $gap;
+}
+
+@mixin innerContent{
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+}

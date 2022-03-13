@@ -1,0 +1,63 @@
+.quotes-wrapper{
+    @include grid(repeat(3, 1fr), 40px);
+    padding: 0 3%;
+    margin: 8rem 4rem 14rem 4rem;
+    margin-bottom: 14rem;
+    background-color: $backgroundBlue;
+
+    .quote-item{
+        background-color: $blue;
+        padding: 30px 20px;
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+
+        p{
+            line-height: 1.5;
+        }
+        .profile{
+            display: flex;
+            flex-direction: row;
+            margin-top: 2rem;
+
+            article:first-child{
+                width: 35px;
+                margin-right: 10px;
+
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            small{
+                display: block;
+                line-height: 1.8;
+            }
+            .profile-name{
+                font-weight: 700;
+            }
+            .profile-job{
+                font-size: 9px;
+            }
+        }
+    }
+    .quote-item:first-child::before{
+        content: url('../images/bg-quotes.png');
+        position: absolute;
+        top:-35px;
+        left: -5px;
+        z-index: -3;
+    }
+}
+
+@media(max-width: 376px){
+    .quotes-wrapper{
+        @include grid(1fr, 0);
+        margin: 8rem 1rem 14rem 1rem;
+
+        .quote-item{
+            margin-bottom: 2rem;
+        }
+    }
+}

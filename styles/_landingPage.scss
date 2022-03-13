@@ -1,0 +1,29 @@
+.landing-page{
+    @include flexCenter;
+
+    div:first-child{
+        display: block;
+        padding:2rem;
+    }
+    div:last-child{
+        text-align: center;
+        @include flexCenter;
+
+        p{
+            @include innerContent;
+        }
+    }
+}
+
+@media(max-width: 376px){
+    .landing-page{
+    
+        div:first-child{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+}

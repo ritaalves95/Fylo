@@ -1,0 +1,39 @@
+.specifications-wrapper{
+    @include grid(repeat(2, 1fr), 20px);
+    background-color: $backgroundBlue;
+    
+    .specifications-item{
+        @include flexCenter;
+        text-align: center;
+        padding: 20px 0;
+        width: 87%;
+
+        img{
+            margin-bottom: 1rem;
+        }
+        h3{
+            line-height: 2;
+        }
+    }
+
+    .specifications-item:nth-of-type(2),
+    .specifications-item:nth-of-type(4){
+        justify-self: flex-end;
+    }
+}
+
+
+@media(max-width: 376px){
+    .specifications-wrapper{
+        @include grid(1fr, 0);
+    
+        .specifications-item{
+            justify-self: center;
+            margin-bottom: 3rem;
+        }
+        .specifications-item:nth-of-type(2),
+        .specifications-item:nth-of-type(4){
+            justify-self: center;
+        }
+    }
+}
